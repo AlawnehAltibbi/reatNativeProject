@@ -1,0 +1,37 @@
+Exception in NSApplicationAWT:
+ java.lang.IllegalStateException: Error - unable to initialize Metal after recreation of graphics device. Cannot load metal library: No MTLDevice.
+java.desktop/sun.awt.CGraphicsDevice.<init>(CGraphicsDevice.java:91)
+java.desktop/sun.awt.CGraphicsEnvironment.initDevices(CGraphicsEnvironment.java:214)
+java.desktop/sun.awt.CGraphicsEnvironment.rebuildDevices(CGraphicsEnvironment.java:151)
+java.desktop/sun.awt.CGraphicsEnvironment._displayReconfiguration(CGraphicsEnvironment.java:167)
+0   CoreFoundation                      0x000000018314f2ec __exceptionPreprocess + 176
+1   libobjc.A.dylib                     0x0000000182c36788 objc_exception_throw + 60
+2   CoreFoundation                      0x000000018314f1dc +[NSException exceptionWithName:reason:userInfo:] + 0
+3   libawt_lwawt.dylib                  0x000000034d4cf328 __displaycb_handle_block_invoke + 884
+4   libosxapp.dylib                     0x000000030bf79540 +[ThreadUtilities invokeBlockCopy:] + 28
+5   Foundation                          0x000000018422a3f4 __NSThreadPerformPerform + 264
+6   CoreFoundation                      0x00000001830da4d8 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28
+7   CoreFoundation                      0x00000001830da46c __CFRunLoopDoSource0 + 176
+8   CoreFoundation                      0x00000001830da1dc __CFRunLoopDoSources0 + 244
+9   CoreFoundation                      0x00000001830d8dc8 __CFRunLoopRun + 828
+10  CoreFoundation                      0x00000001830d8434 CFRunLoopRunSpecific + 608
+11  HIToolbox                           0x000000018d87c19c RunCurrentEventLoopInMode + 292
+12  HIToolbox                           0x000000018d87bfd8 ReceiveNextEventCommon + 648
+13  HIToolbox                           0x000000018d87bd30 _BlockUntilNextEventMatchingListInModeWithFilter + 76
+14  AppKit                              0x0000000186937d68 _DPSNextEvent + 660
+15  AppKit                              0x000000018712d808 -[NSApplication(NSEventRouting) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 700
+16  libosxapp.dylib                     0x000000030bf776e8 -[NSApplicationAWT nextEventMatchingMask:untilDate:inMode:dequeue:] + 240
+17  AppKit                              0x000000018692b09c -[NSApplication run] + 476
+18  libosxapp.dylib                     0x000000030bf77440 +[NSApplicationAWT runAWTLoopWithApp:] + 208
+19  libawt_lwawt.dylib                  0x000000034d512db8 +[AWTStarter starter:headless:] + 488
+20  libosxapp.dylib                     0x000000030bf79540 +[ThreadUtilities invokeBlockCopy:] + 28
+21  Foundation                          0x000000018422a3f4 __NSThreadPerformPerform + 264
+22  CoreFoundation                      0x00000001830da4d8 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28
+23  CoreFoundation                      0x00000001830da46c __CFRunLoopDoSource0 + 176
+24  CoreFoundation                      0x00000001830da1dc __CFRunLoopDoSources0 + 244
+25  CoreFoundation                      0x00000001830d8dc8 __CFRunLoopRun + 828
+26  CoreFoundation                      0x00000001830d8434 CFRunLoopRunSpecific + 608
+27  webstorm                            0x0000000102bcb100 _ZN14xplat_launcher8main_lib17hd64975b96fde8651E + 8500
+28  webstorm                            0x0000000102b619f0 _ZN3std10sys_common9backtrace28__rust_begin_short_backtrace17h9840a7ca047c81edE + 12
+29  webstorm                            0x0000000102b61c90 main + 660
+30  dyld                                0x0000000182c720e0 start + 2360
